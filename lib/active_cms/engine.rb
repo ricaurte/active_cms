@@ -1,6 +1,6 @@
 module ActiveCms
   class Engine < ::Rails::Engine
-    isolate_namespace ActiveCms
+    #isolate_namespace ActiveCms
     
     # load admin-module
     config.after_initialize do
