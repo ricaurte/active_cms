@@ -1,5 +1,11 @@
 ActiveAdmin.register ActiveCms::Page do
 
   form :partial => "admin/pages/pages_form"
-
+  
+  index do
+    column :title
+    column :slug
+    default_actions
+  end
+  
 end

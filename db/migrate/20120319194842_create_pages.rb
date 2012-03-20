@@ -1,6 +1,6 @@
 class CreatePages < ActiveRecord::Migration
   def change
-    create_table :pages do |t|
+    create_table :active_admin_pages do |t|
       t.string :title
       t.text :body
       t.integer :parent_id

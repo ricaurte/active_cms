@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.add_dependency "rails", ">= 3.2.0"
   s.add_dependency "activeadmin", ">= 0.4.0"
   s.add_dependency "kaminari"
+  s.add_dependency "friendly_id"
   
   s.add_dependency "ckeditor", "3.7.0.rc3"
   
