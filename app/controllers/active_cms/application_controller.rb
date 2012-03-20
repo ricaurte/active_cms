@@ -1,5 +1,5 @@
 module ActiveCms
-  class ApplicationController < ActionController::Base
+  class ApplicationController < ::ApplicationController
     
     def not_found
       raise ActionController::RoutingError.new('Not Found')
