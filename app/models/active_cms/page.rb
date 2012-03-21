@@ -6,6 +6,24 @@ module ActiveCms
     extend FriendlyId
     friendly_id :title, :use => :slugged
     
+    has_ancestry
+    
+    def self.tree(ignore=nil)
+      ancestry_options(ActiveCms::Page.scoped.arrange(:order => 'title'), ignore) { |i| 
+        "#{'-' * i.depth} #{i.title}" 
+      }
+    end
+
+    def self.ancestry_options(items, ignore)
+      result = []
+      items.map do |item, sub_items|
+        result << [yield(item), item.id] unless item.id == ignore
+        result += ancestry_options(sub_items, ignore) { |i| 
+          "#{'-' * i.depth} #{i.title}" 
+        }
+      end
+      result
+    end
     
   end
 end

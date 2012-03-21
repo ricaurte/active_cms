@@ -1,4 +1,4 @@
-ActiveAdmin.register ActiveCms::Page, :as => I18n.t("active_cms.pages.single_name") do
+ActiveAdmin.register ActiveCms::Page do
 
   form :partial => "admin/pages/pages_form"
   

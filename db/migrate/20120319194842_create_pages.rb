@@ -3,7 +3,6 @@ class CreatePages < ActiveRecord::Migration
     create_table :active_admin_pages do |t|
       t.string :title
       t.text :body
-      t.integer :parent_id
       t.boolean :skip
       t.string :redirect
       t.boolean :menu

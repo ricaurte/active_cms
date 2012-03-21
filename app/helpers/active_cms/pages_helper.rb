@@ -24,7 +24,7 @@ module ActiveCms
 
     def page_path_for(page)
       if page.new_record?
-        admin_active_cms_pages_path(page)
+        admin_active_cms_pages_path(page).gsub('.', '')
       else
         admin_active_cms_page_path(page)
       end

@@ -17,3 +17,4 @@ gem "jquery-rails"
 # gem 'ruby-debug'
 
 gem 'friendly_id'
+gem 'ancestry'

@@ -2,6 +2,9 @@
 
   <%= f.input :title %>
   <%= f.input :slug %>
+  
+  <%= f.select :parent_id, ActiveCms::Page::tree %>
+  
   <%= f.input :body, :input_html => {:class => :ckeditor} %>
   
   
