@@ -2,3 +2,8 @@ de:
   active_cms:
     pages:
       label: 'Seiten'
+      
+      fields:
+        skip_header: 'Überspringen der obersten Ebene'
+        skip_label: 'Auf erste untergeordnete Seite weiterleiten'
+        skip_text: 'Diese Option verlinkt die Seite zu der ersten untergeordneten Seite. Dies kann nützlich sein, wenn Seiten gruppiert werden sollen.'

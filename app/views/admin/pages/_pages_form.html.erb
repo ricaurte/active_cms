@@ -1,13 +1,31 @@
-<%= semantic_form_for(@active_cms_page, :as => 'active_cms_page', :url => page_path_for(@active_cms_page)) do |f| %>
-
-  <%= f.input :title %>
-  <%= f.input :slug %>
+<div id="main_content_wrapper">
+  <div id="main_content">
+    
+    <fieldset class="inputs">
+      <ol>
+      <%= semantic_form_for(@active_cms_page, :as => 'active_cms_page', :url => page_path_for(@active_cms_page)) do |f| %>
+      <li>
+        <%= f.input :title %>
+      </li>
+      <li>
+        <%= f.input :slug %>
+      </li>
+      <li>
+        <%= f.select :parent_id, ActiveCms::Page::tree %>
+      </li>
+      <li>
+        <h3><%= I18n.t('active_cms.pages.fields.skip_header') %></h3>
+      <li>
+        <%= f.input :skip %>
+      </li>
+      <li>
+        <%= f.input :body, :input_html => {:class => :ckeditor} %>
+      <li>
+    </ol>
+        <fieldset class="buttons"><ol><li class="commit button"><%= f.submit%></li><li class="cancel"><a href="/admin/users?locale=de">Abbrechen</a></li></ol></fieldset>
   
-  <%= f.select :parent_id, ActiveCms::Page::tree %>
-  
-  <%= f.input :body, :input_html => {:class => :ckeditor} %>
-  
-  
-  <%= f.submit %>
-  
-<% end %>
+      <% end %>
+    </fieldset>
+    
+  </div>
+</div>
