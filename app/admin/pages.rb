@@ -1,3 +1,4 @@
+# encoding: utf-8
 ActiveAdmin.register ActiveCms::Page do
   
   form do |f|
