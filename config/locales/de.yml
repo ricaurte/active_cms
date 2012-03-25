@@ -3,6 +3,9 @@ de:
     pages:
       label: 'Seiten'
       
+      sidebar_show:
+        header: 'Aktionen'
+        
       fields:
         skip_header: 'Überspringen der obersten Ebene'
         skip_label: 'Auf erste untergeordnete Seite weiterleiten'

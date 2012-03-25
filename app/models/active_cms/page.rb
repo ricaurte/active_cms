@@ -8,6 +8,12 @@ module ActiveCms
     
     has_ancestry
     
+    # returne extern link to page
+    def link
+      self.redirect unless self.redirect.nil?
+      ('/'+self.slug).gsub('//', '/')
+    end
+    
     def self.tree(ignore=nil)
       ancestry_options(ActiveCms::Page.scoped.arrange(:order => 'title'), ignore) { |i| 
         "#{'-' * i.depth} #{i.title}" 
