@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["cieslik@geisters.de"]
   s.homepage    = "geisters.de/fraank"
   s.summary     = "A Basic-CMS-Plugin based on the great active_admin-Interface."
-  s.description = "TODO: Description of ActiveCms."
+  s.description = "Description of ActiveCms."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
