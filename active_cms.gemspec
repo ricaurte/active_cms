@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["cieslik@geisters.de"]
   s.homepage    = "geisters.de/fraank"
   s.summary     = "A Basic-CMS-Plugin based on the great active_admin-Interface."
-  s.description = "Description of ActiveCms."
+  s.description = "A Basic-CMS-Plugin based on the great active_admin-Interface."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
@@ -23,6 +23,4 @@ Gem::Specification.new do |s|
   s.add_dependency 'ancestry'
   
   s.add_dependency "ckeditor", "3.7.0.rc3"
-  
-  s.add_development_dependency "sqlite3"
 end
