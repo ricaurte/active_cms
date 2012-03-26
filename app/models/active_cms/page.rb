@@ -4,14 +4,18 @@ module ActiveCms
     self.table_name = 'active_cms_pages'
     
     extend FriendlyId
-    friendly_id :title, :use => :slugged
+    friendly_id :make_slug, :use => :slugged
     
     has_ancestry
     
-    # returne extern link to page
+    def make_slug
+      (!self[:slug] || self[:slug].nil? || self[:slug] == "")? title : self[:slug]
+    end
+    
+    # return extern link to page
     def link
       self.redirect unless self.redirect.nil?
-      ('/'+self.slug).gsub('//', '/')
+      ('/'+self.slug).gsub('//', '/')+'.shtml'
     end
     
     def self.tree(ignore=nil)
