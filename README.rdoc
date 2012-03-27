@@ -1,3 +1,11 @@
 = ActiveCms
 
 This project rocks and uses MIT-LICENSE.
+
+Install
+
+$ rake active_cms_engine:install:migrations
+
+Update
+
+$ rake active_cms_engine:install:migrations

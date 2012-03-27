@@ -4,7 +4,7 @@ ActiveAdmin.setup do |config|
     I18n.locale = :de
   end
 
-  config.register_stylesheet 'active_cms/forms.css'
+  config.register_stylesheet 'active_cms/application.css'
   config.register_javascript 'ckeditor/ckeditor.js'
   
   config.before_filter :set_admin_locale
