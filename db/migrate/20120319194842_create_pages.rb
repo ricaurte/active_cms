@@ -1,6 +1,6 @@
 class CreatePages < ActiveRecord::Migration
   def change
-    create_table :active_admin_pages do |t|
+    create_table :active_cms_pages do |t|
       t.string :title
       t.text :body
       t.boolean :skip

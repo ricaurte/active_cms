@@ -11,7 +11,7 @@ ActiveAdmin.register ActiveCms::Page do
     end
     
     f.inputs "Eigenschaften", :class => 'settings' do
-      f.input :parent_id, :as => :select, :collection => ActiveCms::Page::tree(f.id), :label => 'Übergeordnete Seite'
+      f.input :parent_id, :as => :select, :collection => ActiveCms::Page::tree(), :label => 'Übergeordnete Seite'
       f.input :skip, :label => 'Automatisch auf untere Ebene weiterleiten?'
       f.input :menu, :label => 'Anzeige im Menü?'
       f.input :redirect, :label => 'Externe Weiterleitung'
