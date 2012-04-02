@@ -1,6 +1,10 @@
-require "active_cms/engine"
-require "friendly_id"
-require "ancestry"
+require 'active_cms/engine'
+require 'ckeditor'
+require 'friendly_id'
+require 'ancestry'
+
+require 'rack/cache'
+require 'dragonfly'
 
 module ActiveCms
   def self.setup
