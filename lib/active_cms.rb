@@ -7,7 +7,12 @@ require 'rack/cache'
 require 'dragonfly'
 
 module ActiveCms
+  module Backend
+    
+  end
+  
   def self.setup
     yield self
   end
+  
 end
