@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = ActiveCms::VERSION
   s.authors     = ["geisters: Frank Cieslik"]
   s.email       = ["cieslik@geisters.de"]
-  s.homepage    = "geisters.de/fraank"
+  s.homepage    = "http://www.geisters.de"
   s.summary     = "A Basic-CMS-Plugin based on the great active_admin-Interface."
   s.description = "A Basic-CMS-Plugin based on the great active_admin-Interface."
 
