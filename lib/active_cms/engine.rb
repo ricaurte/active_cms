@@ -9,9 +9,6 @@ module ActiveCms
       require File.dirname(__FILE__) + '/../../config/initializers/active_admin.rb'
       require File.dirname(__FILE__) + '/../../config/initializers/active_cms.rb'
       
-      #override the standard from ckeditor
-      require File.dirname(__FILE__) + '/../../lib/active_cms/backend/dragonfly.rb'
-
       require File.dirname(__FILE__) + '/../../config/initializers/ckeditor.rb'
       require File.dirname(__FILE__) + '/../../app/admin/pages.rb'
       # include dragonfly for file-handling

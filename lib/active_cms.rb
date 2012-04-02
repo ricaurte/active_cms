@@ -6,6 +6,9 @@ require 'ancestry'
 require 'rack/cache'
 require 'dragonfly'
 
+#override the standard from ckeditor
+require File.dirname(__FILE__) + '/../../lib/active_cms/backend/dragonfly.rb'
+
 module ActiveCms
 
   def self.setup
