@@ -1,5 +1,5 @@
 # encoding: utf-8
-ActiveAdmin.register ActiveCms::Page do
+ActiveAdmin.register ActiveCms::Page, :as => 'CmsPage' do
   
   form do |f|
     f.inputs I18n.t("active_cms.pages.fields.sections.basic"), :class => 'basic' do
