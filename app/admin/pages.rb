@@ -2,31 +2,35 @@
 ActiveAdmin.register ActiveCms::Page do
   
   form do |f|
-    f.inputs "Details", :class => 'basic' do
+    f.inputs I18n.t("active_cms.pages.fields.sections.basic"), :class => 'basic' do
       
-      f.input :title
-      f.input :slug
+      f.input :title, :label => I18n.t("active_cms.pages.fields.title")
+      f.input :slug, :label => I18n.t("active_cms.pages.fields.slug")
       
-      f.input :body, :input_html => { :class => :ckeditor }
+      f.input :body, :label => I18n.t("active_cms.pages.fields.body"), :input_html => { :class => :ckeditor }
     end
     
-    f.inputs "Eigenschaften", :class => 'settings' do
-      f.input :parent_id, :as => :select, :collection => ActiveCms::Page::tree(), :label => 'Übergeordnete Seite'
-      f.input :skip, :label => 'Automatisch auf untere Ebene weiterleiten?'
-      f.input :menu, :label => 'Anzeige im Menü?'
-      f.input :redirect, :label => 'Externe Weiterleitung'
+    f.inputs I18n.t("active_cms.pages.fields.sections.settings"), :class => 'settings' do
+      f.input :parent_id, :as => :select, :collection => ActiveCms::Page::tree(), :label => I18n.t("active_cms.pages.fields.parent_id")
+      f.input :skip, :label => I18n.t("active_cms.pages.fields.skip")
+      f.input :menu, :label => I18n.t("active_cms.pages.fields.menu")
+      f.input :redirect, :label => I18n.t("active_cms.pages.fields.redirect")
     end
     
-    f.inputs "Meta-Informationen", :class => 'meta' do
-      f.input :meta_title, :label => 'Seiten-Titel'
-      f.input :meta_keywords, :label => 'Keywords'
-      f.input :meta_description, :label => 'Beschreibung'
+    f.inputs I18n.t("active_cms.pages.fields.sections.meta"), :class => 'meta' do
+      f.input :meta_title, :label => I18n.t("active_cms.pages.fields.meta_title")
+      f.input :meta_keywords, :label => I18n.t("active_cms.pages.fields.meta_keywords")
+      f.input :meta_description, :label => I18n.t("active_cms.pages.fields.meta_description")
     end
     
     f.buttons
   end
   
-  menu :label => I18n.t("active_cms.pages.label")
+  menu :label => proc{ I18n.t("active_cms.pages.label") }
+  
+  show :title => :show_title do
+    #column :title
+  end
   
   index do
     column :title
@@ -35,7 +39,7 @@ ActiveAdmin.register ActiveCms::Page do
     default_actions
   end
   
-  sidebar I18n.t("active_cms.pages.sidebar_show.header"), :only => :show do
+  sidebar proc{ I18n.t("active_cms.pages.label") }, :only => :show do 
     render :partial => "admin/pages/show_sidebar"
   end
   

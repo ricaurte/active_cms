@@ -1,12 +1,43 @@
 de:
+  activerecord:
+    models:
+      active_cms_page:
+        one: CMS-Seite
+        other: CMS-Seiten
+    attributes:
+      active_cms_page: 
+        title: Titre
+        model: lalala
+  
   active_cms:
     pages:
-      label: 'Seiten'
+      label: 'CMS'
+      
+      show:
+        title: Seiten-Vorschau
       
       sidebar_show:
         header: 'Aktionen'
-        
+      
       fields:
+        sections:
+          basic: Details
+          settings: Eigenschaften
+          meta: Meta-Informationen
+          
+        title: Titel
+        slug: URL / Identifizierung
+        body: Inhalt
+        
+        parent_id: Übergeordnete Seite
+        skip: Automatisch auf untere Ebene weiterleiten?
         skip_header: 'Überspringen der obersten Ebene'
         skip_label: 'Auf erste untergeordnete Seite weiterleiten'
         skip_text: 'Diese Option verlinkt die Seite zu der ersten untergeordneten Seite. Dies kann nützlich sein, wenn Seiten gruppiert werden sollen.'
+        
+        menu: Anzeige im Menü?
+        redirect: Externe Weiterleitung
+        
+        meta_title: Seiten-Titel
+        meta_keywords: Keywords
+        meta_description: Beschreibung

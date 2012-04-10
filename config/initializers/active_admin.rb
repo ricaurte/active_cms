@@ -1,7 +1,7 @@
 ActiveAdmin.setup do |config|
 
   def set_admin_locale
-    I18n.locale = :de
+    I18n.locale = I18n.default_locale = (params[:local] || I18n.default_locale)
   end
 
   config.register_stylesheet 'active_cms/application.css'
