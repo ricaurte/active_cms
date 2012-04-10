@@ -1,5 +1,42 @@
 en:
+  activerecord:
+    models:
+      active_cms_page:
+        one: CMS-Pages
+        other: CMS-Pages
+    attributes:
+      active_cms_page: 
+        title: Title
+  
   active_cms:
     pages:
       label: 'CMS'
       
+      show:
+        title: Page-Preview
+      
+      sidebar_show:
+        header: Actions
+      
+      fields:
+        sections:
+          basic: Details
+          settings: Settings
+          meta: Meta-Informations
+          
+        title: Title
+        slug: URL / Identifier
+        body: Content
+        
+        parent_id: parent Page
+        skip: Auto redirect to child-page?
+        skip_header: 'Überspringen der obersten Ebene'
+        skip_label: 'Auf erste untergeordnete Seite weiterleiten'
+        skip_text: 'Diese Option verlinkt die Seite zu der ersten untergeordneten Seite. Dies kann nützlich sein, wenn Seiten gruppiert werden sollen.'
+        
+        menu: Display in menu?
+        redirect: extern redirection
+        
+        meta_title: Page-Title
+        meta_keywords: Keywords
+        meta_description: Description
