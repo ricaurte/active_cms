@@ -28,8 +28,11 @@ ActiveAdmin.register ActiveCms::Page, :as => 'CmsPage' do
   
   menu :label => proc{ I18n.t("active_cms.pages.label") }
   
-  show :title => :show_title do
-    #column :title
+  show :title => :show_title do |page|
+    h3 page.title
+    div do
+      simple_format page.body
+    end
   end
   
   index do
