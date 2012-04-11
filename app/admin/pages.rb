@@ -9,9 +9,9 @@ ActiveAdmin.register ActiveCms::Page, :as => 'CmsPage' do
       
       f.input :body, :label => I18n.t("active_cms.pages.fields.body"), :input_html => { :class => :ckeditor }
     end
-    
+
     f.inputs I18n.t("active_cms.pages.fields.sections.settings"), :class => 'settings' do
-      f.input :parent_id, :as => :select, :collection => ActiveCms::Page::tree(), :label => I18n.t("active_cms.pages.fields.parent_id")
+      f.input :parent_id, :as => :select, :collection => ActiveCms::Page::tree(params[:id]), :label => I18n.t("active_cms.pages.fields.parent_id")
       f.input :skip, :label => I18n.t("active_cms.pages.fields.skip")
       f.input :menu, :label => I18n.t("active_cms.pages.fields.menu")
       f.input :redirect, :label => I18n.t("active_cms.pages.fields.redirect")
@@ -33,9 +33,12 @@ ActiveAdmin.register ActiveCms::Page, :as => 'CmsPage' do
   end
   
   index do
-    column :title
-    column :slug
-    column :link
+    column '', :skip_icon, :sortable => false
+    column '', :redirect_icon, :sortable => false
+    column '', :menu_icon, :sortable => false
+    column I18n.t("active_cms.pages.index.header.title"), :title, :sortable => false
+    column I18n.t("active_cms.pages.index.header.slug"), :slug, :sortable => false
+    column I18n.t("active_cms.pages.index.header.link"), :link, :sortable => false
     default_actions
   end
   

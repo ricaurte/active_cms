@@ -13,7 +13,7 @@ en:
       label: 'CMS'
       
       show:
-        title: Page-Preview
+        title: "page-preview for '%{title}'"
       
       sidebar_show:
         header: Actions

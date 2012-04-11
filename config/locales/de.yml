@@ -13,8 +13,16 @@ de:
     pages:
       label: 'CMS'
       
+      index:
+        header:
+          title: Titel
+          slug: Identifizierer
+          link: Link
+        icon:
+          
+        
       show:
-        title: Seiten-Vorschau
+        title: "Seiten-Vorschau für '%{title}'"
       
       sidebar_show:
         header: 'Aktionen'
