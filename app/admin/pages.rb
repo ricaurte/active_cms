@@ -26,7 +26,7 @@ ActiveAdmin.register ActiveCms::Page, :as => 'CmsPage' do
     f.buttons
   end
   
-  menu :label => proc{ I18n.t("active_cms.pages.label") }
+  menu :label => I18n.t("active_cms.pages.label")
   
   show :title => :show_title do |page|
     h3 page.title
