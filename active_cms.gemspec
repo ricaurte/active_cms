@@ -23,7 +23,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'ancestry'
 
   s.add_dependency 'rack-cache'
-  s.add_dependency "dragonfly"
-  
+
   s.add_dependency "ckeditor", "3.7.0.rc3"
 end

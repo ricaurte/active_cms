@@ -4,10 +4,10 @@ require 'friendly_id'
 require 'ancestry'
 
 require 'rack/cache'
-require 'dragonfly'
+#require 'dragonfly'
 
 #override the standard from ckeditor
-require 'active_cms/backend/dragonfly'
+#require 'active_cms/backend/dragonfly'
 
 module ActiveCms
 

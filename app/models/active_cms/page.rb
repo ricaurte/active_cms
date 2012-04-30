@@ -5,7 +5,7 @@ module ActiveCms
     
     extend FriendlyId
     friendly_id :make_slug, :use => :slugged
-    
+
     has_ancestry
     
     #####

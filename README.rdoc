@@ -4,8 +4,17 @@ This project rocks and uses MIT-LICENSE.
 
 Install
 
-$ rake active_cms_engine:install:migrations
+You can now choose your backend as paperclip, carrierwave, or dragonfly
 
-Update
+Example:
 
-$ rake active_cms_engine:install:migrations
+$ gem "paperclip"
+$ rails generate ckeditor:install --orm=active_record --backend=paperclip
+
+in config/routes.rb add:
+
+  mount ActiveCms::Engine => '/'
+  mount Ckeditor::Engine => '/ckeditor'
+
+
+For other backends, check out: https://github.com/galetahub/ckeditor
